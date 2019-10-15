@@ -1,0 +1,120 @@
+/* Start Main Rules */
+
+body {font-family: "Ubuntu"}
+
+.container-fluid {padding:3% 15% 7%}
+h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat-bold'; }
+
+h2 { font-size:3rem ;}
+
+p {color: #8f8f8f}
+
+/* End Main Rules */
+
+/* Start NavBar */
+
+#title nav {padding:1rem 0 4.5rem}
+#title nav .navbar-brand {font-size:2.5rem ;}
+#title nav ul li {padding: 0 18px ; font-size: 1.2rem; font-family: "montserrat-light";}
+
+/* End NavBar*/
+
+/* Start Title */
+#title .row .col-lg-6 h1 {font-size: 3.5rem;}
+#title .row .col-lg-6 img {
+    width: 60%;
+    transform: rotate(25deg);
+    position:absolute;
+    right: 30%
+    }
+
+@media (max-width:991px) {
+
+    #title {text-align: center;}
+
+    #title .row .col-lg-6 img {position: static; transform: rotate(0) }
+}
+    
+#title .row .col-lg-6 .download-button {margin: 5% 3% 5% 0}
+/* End Title */
+
+/* Start Features */
+
+#features { padding: 7% 15%; position: relative; }
+#features .row .features-box {padding: 5%}
+
+#features .row .features-box:last-of-type {padding-right: 20px ; padding-left: 20px }
+
+#features .row  i {font-size: 4rem; color: #DF6B69;  margin-bottom: 20px}
+
+#features .row  i:hover{color:#FF4D69}
+
+/* End Features */
+
+/* Start Testimonials */
+
+#testimonials {background-color: #df6b69;}
+
+.carousel-item {padding: 7% 15% ;}
+
+#testimonials img {width:10%; border-radius: 100%; margin: 20px;}
+
+/* End Testimonials */
+
+/* Start Press */
+
+#press {background-color: #df6b69; padding-bottom: 3%;}
+
+#press .press-logo {width: 10% ; margin:20px 20px 50px}
+
+/* End Press */
+
+/* Start Pricing */
+
+#pricing {padding: 100px ;}
+
+#pricing .pricing-column {padding:3% 2%}
+
+/* End Pricing */
+
+/* Start Call to Action */
+
+#cta {padding: 3% 2%;}
+
+#cta h3 {
+    color: #fff;
+    padding-bottom: 3%;
+    font-family: "Montserrat-black";
+    font-size: 3.5rem;
+    line-height: 1.5
+    }
+
+#cta button {margin:2%}
+
+/* End Call to Action */
+
+/* Start Footer */
+
+#footer {padding:7% 3%}
+
+#footer p {display: block;}
+
+#footer i {margin: 2% .9%}
+
+#footer .fa-twitter:hover {color: #55acee}
+#footer .fa-facebook-f:hover {color: #3b5998}
+#footer .fa-instagram:hover {color: #e95950}
+#footer .fa-envelope:hover {color: }
+
+/* End Footer */
+
+/* Start My FrameWork */
+
+.t-a-c {text-align: center;}
+
+.colored-section {background-color: #FF4D69; color: #fff}
+
+.white-section {background-color: #fff}
+
+/* End My FrameWork */
+

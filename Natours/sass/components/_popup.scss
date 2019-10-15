@@ -1,0 +1,167 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-black, .8);
+    z-index: 90000;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    @supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) or (-webkit-backdrop-filter: blur(1rem)) {
+        -webkit-backdrop-filter: blur(1rem);
+                backdrop-filter: blur(1rem);
+        background-color: rgba($color-black, .4);
+    }
+
+
+    &__content {
+        @include absolute-center;
+        z-index: 95000;
+        width: 75%;
+        background-color: $color-white;
+        border-radius: $border-radius-3;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(.25);
+                transform: translate(-50%, -50%) scale(.25);
+        -webkit-transition: all .5s .2s;
+        transition: all .5s .2s;
+
+        @include respond(tab-land) {
+            width: 90%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    &__left {
+        width: 33.33333333%;
+        display: table-cell;
+
+        @include respond(phone) {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    &__right {
+        width: 66.66666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            padding: 1rem 3rem;
+        }
+
+        @include respond(phone) {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+
+        @include respond(phone) {
+            width: 48%;
+            display: inline-block;
+            padding: 2rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        -webkit-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 2rem;
+                column-gap: 2rem;
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
+
+                @include respond(tab-port) {
+                    font-size: 1.2rem;
+                }
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1.5rem;
+        right: 2.5rem;
+        font-size: 3rem;
+        color: $color-dark-grey-3;
+        text-decoration: none;
+        line-height: 1;
+
+        @include respond(tab-port) {
+            top: 1rem;
+            right: 2rem;
+        }
+
+        @include respond(phone) {
+            top: .5rem;
+            right: 1.5rem;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &:target &__content {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+    }
+
+}
+
+
+    /* Old css
+    &__img,
+    &__img-2 {
+        width: 100%;
+        height: 50%;   
+    }
+
+    &__img-2 {
+        margin-top: -5px;
+    }
+
+
+
+    &__p-big {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__p-small {
+        font-size: 1.4rem;
+        
+    }
+
+    & #row-1 {
+        margin-bottom: 4rem;
+    }
+
+    */
