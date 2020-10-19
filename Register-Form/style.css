@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-white: #fff;
+	--primary-color: #5758bb;
+	--secondary-color: #34ace0;
+}
+
+html {
+	font-size: 62.5%; /* 10px = 1rem */
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+
+	background-image: linear-gradient(to right bottom, var(--primary-color), var(--secondary-color));
+}
+
+body,
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+p {
+	color: var(--color-white);
+	font-size: 1.6rem;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: all .2s ease-in-out;
+}
+
+.wrong-p {
+	color: #e67e22;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+
+.correct-p {
+	color: #00b894;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+h1 {
+	font-size: 4rem;
+	color: var(--color-white);
+	margin-bottom: 8rem;
+}
+
+input {
+	margin: 1rem;
+	width: 40rem;
+	height: 5rem;
+	border: none;
+	border-radius: 4px;
+	border-bottom: 3px solid transparent;
+	transition: all .2s ease-in-out;
+}
+
+.wrong {
+	border-bottom: 3px solid #e67e22;
+}
+
+.correct {
+	border-bottom: 3px solid #00b894;
+}
+
+input,
+button {
+	outline: none;
+	font-size: 2rem;
+}
+
+input::placeholder {
+	padding-left: 2rem;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+
+button {
+	border: none;
+	border-radius: 4px;
+	padding: 1rem 2rem;
+	margin-top: 1rem;
+	background-color: var(--primary-color);
+	color: var(--color-white);
+	cursor: pointer;
+	transform: translateY(0);
+	box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
+	transition: all .2s ease-in-out;
+}
+
+button:hover {
+	background-color: var(--secondary-color);
+}
+
+button:active {
+	transform: translateY(2px);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
