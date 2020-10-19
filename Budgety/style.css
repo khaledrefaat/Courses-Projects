@@ -1,0 +1,336 @@
+/* Start Main Rules */
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+:root {
+	--white-color: #fff;
+	--income-color: #1e90ff;
+	--expenses-color: #ff6b81;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.25%;
+}
+
+body {
+	font-family: 'lato', sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+/*
+.container {
+    display: flex;
+    align-items: center;
+}*/
+
+/* End Main Rules */
+
+/* Start Header */
+
+.header {
+	background-image: url('bg.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 7rem 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.budget__time {
+	color: var(--white-color);
+	font-size: 2.2rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.budget__value {
+	color: var(--white-color);
+	margin-bottom: 1.5rem;
+	font-weight: 300;
+	font-size: 5rem;
+}
+
+.budget__income,
+.budget__expenses {
+	width: 35rem;
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.budget__income--text,
+.budget__expenses--text {
+	color: #333;
+	font-size: 1.4rem;
+	padding: .8rem;
+	margin-right: auto;
+	font-weight: 300;
+}
+
+.budget__income--price,
+.budget__expenses--price {
+	color: var(--white-color);
+	font-size: 2rem;
+	padding: .8rem;
+}
+
+.budget__income--price {
+	margin-right: 4.3rem;
+}
+/*.budget__expenses--price {display: flex; align-items: center}*/
+
+.budget__income {
+	background-color: var(--income-color);
+}
+.budget__expenses {
+	background-color: var(--expenses-color);
+}
+
+.budget__expenses--percentage {
+	background-color: var(--expenses-color);
+	width: 3rem;
+	height: 2rem;
+	font-size: 1.4rem;
+	margin-left: 1rem;
+	color: var(--white-color);
+	margin-right: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* End Header */
+
+/* Start Bottom */
+
+/* Start Add */
+.add {
+	background-color: #eee;
+	padding: 1.5rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.add__type {
+	width: 5.5rem;
+	height: 4.4rem;
+}
+
+.add__description,
+.add__type,
+.add__value {
+	outline-color: var(--income-color);
+	margin-right: 1.5rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	height: 4.4rem;
+}
+
+.pink__focus {
+	outline-color: var(--expenses-color) !important;
+}
+
+.add__description::placeholder,
+.add__value::placeholder {
+	font-size: 1.6rem;
+	padding-left: 1rem;
+	text-transform: capitalize;
+}
+
+.add__description,
+.add__value {
+	font-size: 1.8rem;
+}
+
+.add__description {
+	width: 40rem;
+}
+.add__value {
+	width: 10rem;
+	margin-right: 2rem;
+}
+
+.add__btn,
+.expenses__btn,
+.income__btn {
+	background-color: transparent;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	outline: none;
+	border: 1px solid var(--income-color);
+	color: var(--income-color);
+	transition: transform .2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.expenses__btn {
+	border: 1px solid var(--expenses-color);
+}
+
+.add__btn:hover {
+	cursor: pointer;
+}
+
+.add__btn:active {
+	transform: translateY(2px);
+}
+
+.btn__checkmark {
+	font-size: 1.5rem;
+}
+
+.btn__pink {
+	color: var(--expenses-color) !important;
+	border: 1px solid var(--expenses-color) !important;
+}
+
+/* End Add */
+
+/* Start Container */
+
+.container {
+	display: flex;
+	justify-content: center;
+	padding: 4rem 12rem 0 12rem;
+}
+
+.income,
+.expenses {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 50%;
+}
+
+.income {
+	margin-right: 2.5rem;
+}
+.expenses {
+	margin-left: 2.5rem;
+}
+
+.income-heading,
+.expenses-heading {
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+.income__list,
+.expenses__list {
+	width: 100%;
+}
+
+.income__item,
+.expenses__item {
+	display: flex;
+	align-items: center;
+	border-bottom: .5px solid #ddd;
+	padding-bottom: 1rem;
+	width: 100%;
+	padding-top: 1rem;
+}
+
+.income__item:first-of-type,
+.expenses__item:first-of-type {
+	border-top: 1px solid #ddd;
+}
+
+.income__item:nth-child(even),
+.expenses__item:nth-child(even) {
+	background-color: #f7f7f7;
+}
+
+.income__description,
+.expenses__description {
+	font-size: 2rem;
+	color: #555;
+	margin-right: auto;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.income__value {
+	font-size: 2rem;
+	color: var(--income-color);
+}
+
+.expenses__value {
+	font-size: 1.8rem;
+	color: var(--expenses-color);
+}
+
+.expenses__percentage {
+	background-color: var(--expenses-color);
+	margin: 1rem;
+	width: 3rem;
+	height: 2rem;
+	font-size: 1.2rem;
+	text-align: center;
+}
+/* look at the top of the page to view more details about css of buttons */
+.expenses__btn,
+.income__btn {
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	transition: all .15s;
+}
+
+.income__btn {
+	border: 1px solid var(--income-color);
+}
+
+.btn__close--income {
+	color: var(--income-color);
+	font-size: 1.3rem;
+}
+.btn__close--expenses {
+	color: var(--expenses-color);
+	font-size: 1.3rem;
+}
+
+.income-heading {
+	color: var(--income-color);
+}
+.expenses-heading {
+	color: var(--expenses-color);
+}
+
+.income__item:hover .income__btn,
+.expenses__item:hover .expenses__btn {
+	visibility: visible;
+	margin-left: 2rem;
+}
+
+.expenses__btn:hover,
+.income__btn:hover {
+	cursor: pointer;
+}
+
+.expenses__btn:active,
+.income__btn:active {
+	transform: translateY(2px);
+}
+
+/* End Container */
+
+/* End Bottom */

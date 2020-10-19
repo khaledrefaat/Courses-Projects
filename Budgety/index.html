@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Comatitble" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Budgety</title>
+</head>
+
+<body>
+    <div>
+
+        <header class="header">
+            <h3 class="budget__time">Available Budget in %Month%:</h3>
+            <h1 class="budget__value">+ 2,345.64</h1>
+
+            <div class="budget__income">
+                <div class="budget__income--text">income</div>
+                <div class="budget__income--price">+ 4,300.00</div>
+            </div>
+
+            <div class="budget__expenses">
+                <div class="budget__expenses--text">expenses</div>
+                <div class="budget__expenses--price">- 1,954.36</div>
+                <div class="budget__expenses--percentage">45%</div>
+            </div>
+
+        </header>
+
+        <div class="bottom">
+
+            <div class="add">
+                <select class="add__type">
+                    <option value="inc">+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" class="add__description" placeholder="add description">
+                <input type="number" class="add__value" placeholder="value">
+                <button class="add__btn">
+                    <ion-icon name="checkmark" class="btn__checkmark"></ion-icon>
+                </button>
+            </div>
+            <div class="container">
+                <div class="income">
+                    <h2 class="income-heading">income</h2>
+
+                    <div class="income__list">
+
+
+                        <!--
+                        <div class="income__item" id="income-0">
+                            <div class="income__description">salary</div>
+                            <div class="income__value">2,100.00</div>
+                            <button class="income__btn">
+                                <ion-icon name="close" class="btn__close--income"></ion-icon>
+                            </button>
+                        </div>
+                        -->
+
+
+                    </div>
+                </div>
+
+                <div class="expenses">
+                    <h2 class="expenses-heading">expenses</h2>
+
+                    <div class="expenses__list">
+
+
+                        <!--
+                        <div class="expenses__item" id="expenses-0">
+                            <div class="expenses__description">salary</div>
+                            <div class="expenses__value">2,100.00</div>
+                            <div class="expenses__percentage">21%</div>
+                            <button class="expenses__btn">
+                                <ion-icon name="close" class="btn__close--expenses"></ion-icon>
+                            </button>
+                        </div>
+                        -->
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
