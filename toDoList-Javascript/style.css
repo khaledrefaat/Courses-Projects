@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	min-height: 100vh;
+	background-image: linear-gradient(to right bottom, #74b9ff, #9980fa);
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	font-size: 2rem;
+}
+
+header,
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 20vh;
+}
+
+form input,
+form button {
+	padding: .5rem;
+	font-size: 3rem;
+	border: none;
+	background-color: #fff;
+	outline: none;
+}
+
+form button {
+	padding: .7rem;
+	color: #9980fa;
+	background-color: #fff;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+form button:hover {
+	background-color: #9980fa;
+	color: #fff;
+}
+
+.todo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.todo-list {
+	min-width: 30%;
+	list-style: none;
+}
+
+.todo {
+	margin: 1rem;
+	background-color: #fff;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.8rem;
+	transition: all .5s ease;
+}
+
+.todo li {
+	flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+	background-color: #a29bfe;
+	color: #fff;
+	font-size: 1.5rem;
+	cursor: pointer;
+	border: none;
+	padding: 1rem;
+	outline: none;
+	transition: all .3s ease;
+}
+
+/* to prevent clicking on the icon for the javascript eventlistener */
+.trash-btn i,
+.complete-btn i {
+	pointer-events: none;
+}
+
+.complete-btn {
+	background-color: #4cd137;
+}
+
+.complete-btn:hover {
+	background-color: #44bd32;
+}
+
+.trash-btn:hover {
+	background-color: #9980fa;
+}
+
+.todo-item {
+	padding: 0 1rem;
+}
+
+/* todo completed or deleted */
+
+.complete {
+	text-decoration: line-through;
+	opacity: .5;
+}
+
+.fall {
+	transform: translateY(8rem) rotateZ(20deg);
+	opacity: 0;
+}
+
+/* select style */
+
+/* this is the div contains the select */
+.select {
+	margin-left: 1.5rem;
+	position: relative;
+	overflow: hidden;
+}
+
+/* this is the select itself */
+.filter-todo {
+	outline: none;
+	border: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	color: #9980fa;
+	width: 15rem;
+	cursor: pointer;
+	padding: 1.5rem;
+}
+
+.select::after {
+	content: "\25BC";
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1.6rem;
+	pointer-events: none;
+	background-color: #9980fa;
+	transition: all .3s ease;
+	/* font-size: 12px; */
+}
+
+.select:hover::after {
+	background-color: #fff;
+	color: #9980fa;
+}
