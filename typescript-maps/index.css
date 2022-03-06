@@ -1,0 +1,14 @@
+h1 {
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+  background-color: #01a3a4;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+h1::selection {
+  background-color: transparent;
+}
