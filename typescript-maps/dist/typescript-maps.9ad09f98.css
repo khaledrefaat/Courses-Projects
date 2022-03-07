@@ -13,5 +13,13 @@ h1::selection {
   background-color: transparent;
 }
 
+.map {
+  width: 40rem;
+  height: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
 
 /*# sourceMappingURL=/typescript-maps.9ad09f98.css.map */
