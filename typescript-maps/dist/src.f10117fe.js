@@ -24603,6 +24603,10 @@ function () {
     };
   }
 
+  User.prototype.markerContent = function () {
+    return "<div><strong>User Name:</strong> ".concat(this.name, "</div>");
+  };
+
   return User;
 }();
 
@@ -24628,6 +24632,10 @@ function () {
       lng: +faker_1.faker.address.longitude()
     };
   }
+
+  Company.prototype.markerContent = function () {
+    return "<div><strong>Company Name:</strong> ".concat(this.name, "\n      <br />    \n      <strong>Catchphrase:</strong> ").concat(this.catchPhrase, "</div>\n      ");
+  };
 
   return Company;
 }();
@@ -24656,12 +24664,20 @@ function () {
   }
 
   CustomMap.prototype.addMarker = function (mappable) {
-    new google.maps.Marker({
+    var _this = this;
+
+    var marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: mappable.location.lat,
         lng: mappable.location.lng
       }
+    });
+    marker.addListener('click', function () {
+      var infoWindow = new google.maps.InfoWindow({
+        content: mappable.markerContent()
+      });
+      infoWindow.open(_this.googleMap, marker);
     });
   };
 

@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+import { Marker } from './CustomMap';
 
 // interface UserData {
 //   name: string;
@@ -8,7 +9,7 @@ import { faker } from '@faker-js/faker';
 //   };
 // }
 
-export class User {
+export class User implements Marker {
   name: string;
   location: { lat: number; lng: number };
 
@@ -18,5 +19,9 @@ export class User {
       lat: +faker.address.latitude(),
       lng: +faker.address.longitude(),
     };
+  }
+
+  markerContent() {
+    return `<div><strong>User Name:</strong> ${this.name}</div>`;
   }
 }
