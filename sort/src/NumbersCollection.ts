@@ -1,5 +1,7 @@
-class NumbersCollection {
-  constructor(readonly collection: number[]) {}
+import { Sortable } from './Sorter';
+
+class NumbersCollection implements Sortable {
+  constructor(public collection: number[]) {}
 
   get length(): number {
     return this.collection.length;
