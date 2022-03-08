@@ -1,7 +1,7 @@
 import { Sortable } from './Sorter';
 
 class CharactersCollection implements Sortable {
-  constructor(public collection: string) {}
+  constructor(private collection: string) {}
 
   get length(): number {
     return this.collection.length;
@@ -20,6 +20,10 @@ class CharactersCollection implements Sortable {
     chars[leftIndex] = chars[rightIndex];
     chars[rightIndex] = leftHand;
     this.collection = chars.join('');
+  }
+
+  print() {
+    console.log(this.collection);
   }
 }
 

@@ -15,5 +15,8 @@ class NumbersCollection {
         this.collection[leftIndex] = this.collection[rightIndex];
         this.collection[rightIndex] = leftHand;
     }
+    print() {
+        console.log(this.collection);
+    }
 }
 exports.default = NumbersCollection;

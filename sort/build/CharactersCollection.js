@@ -18,5 +18,8 @@ class CharactersCollection {
         chars[rightIndex] = leftHand;
         this.collection = chars.join('');
     }
+    print() {
+        console.log(this.collection);
+    }
 }
 exports.default = CharactersCollection;
