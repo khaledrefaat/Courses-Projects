@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "@types/node": "^17.0.21",
     "concurrently": "^7.0.0",
     "nodemon": "^2.0.15"
   },
   "name": "stats",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon ./build/index.js",
