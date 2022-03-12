@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const WinsAnalysis_1 = __importDefault(require("./analyzers/WinsAnalysis"));
 const CsvFileReader_1 = __importDefault(require("./CsvFileReader"));
 const MatchReader_1 = __importDefault(require("./MatchReader"));
-const ConsoleReport_1 = __importDefault(require("./reportTargets/ConsoleReport"));
+const HtmlReport_1 = __importDefault(require("./reportTargets/HtmlReport"));
 const Summary_1 = require("./Summary");
 // Create an object that satisfies the 'DataReader' interface
 const matches = new CsvFileReader_1.default('football.csv');
@@ -14,7 +14,7 @@ const matches = new CsvFileReader_1.default('football.csv');
 const matchReader = new MatchReader_1.default(matches);
 matchReader.load();
 let manUnitWins = 0;
-const summary = new Summary_1.Summary(new WinsAnalysis_1.default('Man United'), new ConsoleReport_1.default());
+const summary = new Summary_1.Summary(new WinsAnalysis_1.default('Man United'), new HtmlReport_1.default());
 summary.buildAndPrintReport(matchReader.matches);
 // const dateData = matches.getData.map(item => item[0]);
 // console.log(dateData.map(date => dateStringToDate(date)));
