@@ -1,9 +1,10 @@
 import CsvFileReader from './CsvFileReader';
+import MatchReader from './MatchReader';
 import { matchResult } from './MatchResults';
 
 let manUnitWins = 0;
 
-const matches = new CsvFileReader('football.csv');
+const matches = new MatchReader('football.csv');
 
 matches.read();
 
@@ -15,6 +16,9 @@ for (let match of matches.getData) {
     manUnitWins++;
   }
 }
+
+console.log(`Man United Won: ${manUnitWins} Games`);
+
 // const dateData = matches.getData.map(item => item[0]);
 
 // console.log(dateData.map(date => dateStringToDate(date)));
