@@ -17,7 +17,8 @@ class CsvFileReader {
             .split('\n')
             .map((row) => {
             return row.split(',');
-        });
+        })
+            .map(this.mapRow);
     }
     get getData() {
         return this.data;
